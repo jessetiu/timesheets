@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
   # Page format:
   # get '/url', to: 'controller#action'
   # I think the default action is go to the view.
   # To link to a page, use <url>_path
-  get '/signup', to: 'users#signup'
-  get '/login', to: 'users#login'
-  get 'users/new'
-  get 'sessions/new'
-	root 'users#loginmenu'
+  root 'users#loginmenu'
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+  resources :users #defines a whole bunch of routes for a fully RESTful API
 
   # In future
 
