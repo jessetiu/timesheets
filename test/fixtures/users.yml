@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+test:
+  name: Test
+  email: example@railstutorial.org
+  username: test
+
+# two:
+#   name: MyString
+#   email: MyString
